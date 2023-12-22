@@ -61,10 +61,8 @@ The field of image denoising has witnessed significant advancements. One notable
 - PyTorch
 - Matplotlib
 
-## Contributing
 
-Contributions are welcome! Please follow the [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
 ## License
 
-This project is licensed under the [African Masters In Machine Intelligence](LICENSE).
+This project is licensed under the [African Masters In Machine Intelligence(https://aimsammi.org/).
