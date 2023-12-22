@@ -9,65 +9,51 @@ This repository contains code for image denoising using an autoencoder neural ne
 - [Introduction](#introduction)
 - [Methods](#methods)
 - [Results](#results)
-
+- [Related Works](#related-works)
+- [Usage](#usage)
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Introduction
-Biometric data, comprising unique physiological and behav-
-ioral characteristics, is fundamental to modern security and
-identification systems. These distinctive traits, ranging from
-fingerprints to facial features, serve as a reliable means of ver-
-ifying and authenticating individuals. However, the effective-
-ness of biometric recognition systems is often compromised by
-the inherent challenge of noise within acquired biometric im-
-ages. This noise can stem from various sources, including im-
-age acquisition devices, environmental conditions, and inherent
-biological variations.
-The accurate and reliable processing of biometric data is im-
-perative for the seamless operation of identification systems in
-diverse applications, such as access control, border security, and
-financial transactions. In particular, the robustness of biometric
-recognition systems hinges on the quality of input data, where
-noise can introduce errors, leading to false positives or nega-
-tives.
-This report delves into the intricate realm of addressing noise
-in biometric data through the application of advanced machine
-learning techniques, with a specific focus on the utilization of
-autoencoder neural networks. The motivation behind this ex-
-ploration is rooted in the recognition that noise in biometric
-images can compromise the precision and integrity of identi-
-fication systems, potentially undermining their overall security
-and reliability.
-The introduction of autoencoder neural networks into this
-context presents a promising avenue for mitigating the impact
-of noise. Autoencoders, being unsupervised learning models,
-possess the inherent capability to learn compact and meaning-
-ful representations of input data. Through a systematic train-
-ing process, these neural networks can discern patterns in noisy
-biometric images, effectively isolating and reconstructing the
-underlying clean features.
+
+Biometric data, comprising unique physiological and behavioral characteristics, is fundamental to modern security and identification systems. This report delves into addressing noise in biometric data through advanced machine learning techniques, specifically the utilization of autoencoder neural networks. The goal is to enhance the quality of biometric images by denoising them, contributing to the improvement of biometric recognition systems.
+
 ## Methods
 
 ### Data Preparation
 
-The MNIST dataset is utilized as a representative biometric dataset. Gaussian noise is added during the training phase to simulate real-world noise in biometric images.
+The MNIST dataset is employed as a representative biometric dataset. Gaussian noise is intentionally added during the training phase to simulate real-world noise in biometric images.
 
 ### Autoencoder Architecture
 
-The autoencoder architecture consists of an encoder and a decoder. Convolutional layers are used for feature extraction, and linear layers handle encoding and decoding.
+The proposed autoencoder architecture consists of an encoder and a decoder, using convolutional layers for feature extraction and linear layers for encoding and decoding.
 
 ### Training
 
-The autoencoder is trained using the Mean Squared Error (MSE) loss function. The Adam optimizer is employed with dropout to prevent overfitting.
+The autoencoder is trained using the Mean Squared Error (MSE) loss function, and the Adam optimizer is employed with dropout to prevent overfitting.
+
+## Results
+
+### Training Phase
+
+During the ten epochs of training, the autoencoder effectively learned to denoise biometric images, as indicated by the decreasing trend in training loss:
+
+- Epoch 1: Training Loss - 0.610211
+- Epoch 2: Training Loss - 0.568494
+- ...
+- Epoch 10: Training Loss - 0.506246
+
+### Evaluation Phase
+
+The trained autoencoder was evaluated on a separate test set, resulting in a test loss of 0.074321. Visual inspection of denoised images showcased the model's ability to preserve essential features while removing noise.
+
+## Related Works
+
+The field of image denoising has witnessed significant advancements. One notable contribution is the work titled "Autoencoders Based Deep Learner for Image Denoising" by Komal Bajaj, Dushyant Kumar Singh, and Mohd. Aquib Ansari. The paper introduces an innovative approach leveraging autoencoders for image denoising, achieving higher Peak Signal-to-Noise Ratio (PSNR) results compared to conventional models.
 
 
-
-## Access the Reports and Codes
-
-- [Report (PDF)](https://github.com/Muhirwakyeyune/image-denoising-autoencoder/blob/main/Image_Cleaning_With_Autoencoder_Report.pdf)
-- [Code (Jupyter Notebook)](https://github.com/Muhirwakyeyune/image-denoising-autoencoder/blob/main/Autoencoder_for_Image_Denoising_using_PyTorch_Muhirwa__.ipynb)
+    ```
 
 ## Dependencies
 
