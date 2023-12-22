@@ -65,4 +65,4 @@ The field of image denoising has witnessed significant advancements. One notable
 
 ## License
 
-This project is licensed under the [African Masters In Machine Intelligence(https://aimsammi.org/).
+This project is licensed under the [African Masters In Machine Intelligence](https://aimsammi.org/).
