@@ -57,7 +57,7 @@ The field of image denoising has witnessed significant advancements. One notable
 
 ## Dependencies
 
-- Python 3.x
+- Python 3.11
 - PyTorch
 - Matplotlib
 
