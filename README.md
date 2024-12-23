@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains code for image denoising using an autoencoder neural network. The autoencoder is trained on the MNIST dataset with added noise, aiming to improve the quality of biometric images.
+This repository contains code for image denoising using an autoencoder neural network. The autoencoder is trained on the MRI dataset with added noise, aiming to improve the quality of biometric images.
 
 ## Table of Contents
 
